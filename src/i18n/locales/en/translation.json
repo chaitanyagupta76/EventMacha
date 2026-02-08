@@ -1,0 +1,30 @@
+{
+  "header": {
+    "logo": "Event Macha",
+    "nav": {
+      "home": "Home",
+      "themes": "Themes",
+      "contact": "Contact",
+      "help": "Help"
+    },
+    "language": "Language"
+  },
+  "hero": {
+    "heading": "Create Stunning Websites for Every Occasion",
+    "subtext": "Pick a theme and launch in minutes.",
+    "cta": "Get Started"
+  },
+  "categories": {
+    "title": "Pick a Website Theme by Category"
+  },
+  "trending": {
+    "title": "Trending Themes",
+    "popular": "Popular"
+  },
+  "footer": {
+    "contact": "Contact",
+    "help": "Help",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2026 Event Macha. All rights reserved."
+  }
+}

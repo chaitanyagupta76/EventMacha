@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Romantic Garden",
+    "category": "Wedding",
+    "imageUrl": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+    "isPopular": true
+  },
+  {
+    "id": 2,
+    "name": "Modern Minimalist",
+    "category": "Wedding",
+    "imageUrl": "https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=400&h=300&fit=crop",
+    "isPopular": false
+  },
+  {
+    "id": 3,
+    "name": "Vintage Celebration",
+    "category": "Birthday",
+    "imageUrl": "https://images.unsplash.com/photo-1464347744102-11db6282f854?w=400&h=300&fit=crop",
+    "isPopular": true
+  },
+  {
+    "id": 4,
+    "name": "Executive Summit",
+    "category": "Corporate",
+    "imageUrl": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&h=300&fit=crop",
+    "isPopular": false
+  },
+  {
+    "id": 5,
+    "name": "Sweet Dreams",
+    "category": "Baby Shower",
+    "imageUrl": "https://images.unsplash.com/photo-1519689373023-dd07c7988603?w=400&h=300&fit=crop",
+    "isPopular": true
+  },
+  {
+    "id": 6,
+    "name": "Cozy Welcome",
+    "category": "Housewarming",
+    "imageUrl": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&h=300&fit=crop",
+    "isPopular": false
+  }
+]
