@@ -2,16 +2,33 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
-import trendingData from '../data/trending.json';
 import { staggerContainer, cardVariant, viewportConfig } from '../utils/animations';
 
+// Import all language-specific data
+import trendingEn from '../data/trending.json';
+import trendingTe from '../data/trending.te.json';
+import trendingHi from '../data/trending.hi.json';
+import trendingTa from '../data/trending.ta.json';
+import trendingKn from '../data/trending.kn.json';
+
+const trendingData = {
+    en: trendingEn,
+    te: trendingTe,
+    hi: trendingHi,
+    ta: trendingTa,
+    kn: trendingKn,
+};
+
 const TrendingSection = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [themes, setThemes] = useState([]);
 
     useEffect(() => {
-        setThemes(trendingData);
-    }, []);
+        // Load data based on current language, fallback to English if not available
+        const currentLang = i18n.language;
+        const data = trendingData[currentLang] || trendingData.en;
+        setThemes(data);
+    }, [i18n.language]); // Re-load when language changes
 
     return (
         <section id="themes" className="py-12 md:py-16 lg:py-20 bg-white dark:bg-gray-900 transition-colors duration-300">

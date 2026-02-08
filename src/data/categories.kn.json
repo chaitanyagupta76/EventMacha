@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "ಮದುವೆ",
+    "description": "ನಿಮ್ಮ ವಿಶೇಷ ದಿನಕ್ಕಾಗಿ ಸೊಗಸಾದ ಥೀಮ್‌ಗಳು",
+    "imageUrl": "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "ಹುಟ್ಟುಹಬ್ಬ",
+    "description": "ಮತ್ತೊಂದು ವರ್ಷವನ್ನು ಶೈಲಿಯಲ್ಲಿ ಆಚರಿಸಿ",
+    "imageUrl": "https://images.unsplash.com/photo-1464347744102-11db6282f854?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 3,
+    "name": "ಕಾರ್ಪೊರೇಟ್",
+    "description": "ವೃತ್ತಿಪರ ಈವೆಂಟ್ ವೆಬ್‌ಸೈಟ್‌ಗಳು",
+    "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 4,
+    "name": "ಬೇಬಿ ಶವರ್",
+    "description": "ಚಿಕ್ಕವರನ್ನು ಸಂತೋಷದಿಂದ ಸ್ವಾಗತಿಸಿ",
+    "imageUrl": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 5,
+    "name": "ಗೃಹಪ್ರವೇಶ",
+    "description": "ನಿಮ್ಮ ಹೊಸ ಮನೆಯನ್ನು ಪ್ರೀತಿಪಾತ್ರರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ",
+    "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
+  }
+]

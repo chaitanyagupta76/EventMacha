@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "शादी",
+    "description": "आपके विशेष दिन के लिए सुरुचिपूर्ण थीम्स",
+    "imageUrl": "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "जन्मदिन",
+    "description": "एक और साल शानदार तरीके से मनाएं",
+    "imageUrl": "https://images.unsplash.com/photo-1464347744102-11db6282f854?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 3,
+    "name": "कॉर्पोरेट",
+    "description": "पेशेवर इवेंट वेबसाइट्स",
+    "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 4,
+    "name": "बेबी शावर",
+    "description": "छोटे से का खुशी से स्वागत करें",
+    "imageUrl": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 5,
+    "name": "गृहप्रवेश",
+    "description": "अपने नए घर को प्रियजनों के साथ साझा करें",
+    "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
+  }
+]

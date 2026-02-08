@@ -297,11 +297,47 @@ Before committing any component, verify:
 
 ## Git Workflow
 
-1. Work on feature branch
-2. Test responsiveness on all screen sizes
-3. Commit with descriptive messages
-4. Push to GitHub
-5. Create pull request (if team workflow)
+**IMPORTANT**: Do not push code to GitHub for every small change. Batch related changes together.
+
+### Best Practices
+
+1. **Work on feature branch** (optional for solo development)
+2. **Test responsiveness** on all screen sizes before committing
+3. **Batch related changes**: Group related features/fixes into a single commit
+4. **Commit with descriptive messages** that explain what was changed and why
+5. **Push to GitHub** only when a feature is complete or at logical milestones
+
+### When to Push
+
+✅ **DO push when:**
+- A complete feature is implemented and tested
+- Multiple related changes are ready (e.g., new language support + UI updates)
+- Reaching a logical milestone (e.g., all animations complete)
+- End of work session with stable, working code
+
+❌ **DON'T push for:**
+- Every single file change
+- Work-in-progress code
+- Experimental changes that might be reverted
+- Minor tweaks or typo fixes (batch these together)
+
+### Example Workflow
+
+```bash
+# Make multiple related changes
+git add .
+git commit -m "Add multi-language support with 5 Indian languages"
+
+# Continue working on related features
+# ... make more changes ...
+
+# Commit again when another logical unit is complete
+git add .
+git commit -m "Add scroll animations to all sections"
+
+# Push when ready (e.g., end of session or major milestone)
+git push
+```
 
 ---
 

@@ -2,16 +2,33 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
-import categoriesData from '../data/categories.json';
 import { staggerContainer, cardVariant, viewportConfig } from '../utils/animations';
 
+// Import all language-specific data
+import categoriesEn from '../data/categories.json';
+import categoriesTe from '../data/categories.te.json';
+import categoriesHi from '../data/categories.hi.json';
+import categoriesTa from '../data/categories.ta.json';
+import categoriesKn from '../data/categories.kn.json';
+
+const categoryData = {
+    en: categoriesEn,
+    te: categoriesTe,
+    hi: categoriesHi,
+    ta: categoriesTa,
+    kn: categoriesKn,
+};
+
 const CategorySection = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        setCategories(categoriesData);
-    }, []);
+        // Load data based on current language, fallback to English if not available
+        const currentLang = i18n.language;
+        const data = categoryData[currentLang] || categoryData.en;
+        setCategories(data);
+    }, [i18n.language]); // Re-load when language changes
 
     return (
         <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-brand-cream via-brand-lotus/20 to-brand-cream dark:bg-gray-800 transition-colors duration-300">

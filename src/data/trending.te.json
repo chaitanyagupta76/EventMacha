@@ -1,43 +1,43 @@
 [
   {
     "id": 1,
-    "name": "Romantic Garden",
-    "category": "Wedding",
+    "name": "రొమాంటిక్ గార్డెన్",
+    "category": "పెళ్లి",
     "imageUrl": "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=300&fit=crop",
     "isPopular": true
   },
   {
     "id": 2,
-    "name": "Modern Minimalist",
-    "category": "Wedding",
+    "name": "ఆధునిక మినిమలిస్ట్",
+    "category": "పెళ్లి",
     "imageUrl": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=400&h=300&fit=crop",
     "isPopular": false
   },
   {
     "id": 3,
-    "name": "Vintage Celebration",
-    "category": "Birthday",
+    "name": "పాత కాలపు వేడుక",
+    "category": "పుట్టినరోజు",
     "imageUrl": "https://images.unsplash.com/photo-1464347744102-11db6282f854?w=400&h=300&fit=crop",
     "isPopular": true
   },
   {
     "id": 4,
-    "name": "Executive Summit",
-    "category": "Corporate",
+    "name": "ఎగ్జిక్యూటివ్ సమ్మిట్",
+    "category": "కార్పొరేట్",
     "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop",
     "isPopular": false
   },
   {
     "id": 5,
-    "name": "Sweet Dreams",
-    "category": "Baby Shower",
+    "name": "స్వీట్ డ్రీమ్స్",
+    "category": "బేబీ షవర్",
     "imageUrl": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=300&fit=crop",
     "isPopular": true
   },
   {
     "id": 6,
-    "name": "Cozy Welcome",
-    "category": "Housewarming",
+    "name": "హాయిగా స్వాగతం",
+    "category": "గృహప్రవేశం",
     "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop",
     "isPopular": false
   }

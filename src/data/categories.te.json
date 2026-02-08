@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "పెళ్లి",
+    "description": "మీ ప్రత్యేక రోజు కోసం సొగసైన థీమ్స్",
+    "imageUrl": "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "పుట్టినరోజు",
+    "description": "మరో సంవత్సరం వేడుకగా జరుపుకోండి",
+    "imageUrl": "https://images.unsplash.com/photo-1464347744102-11db6282f854?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 3,
+    "name": "కార్పొరేట్",
+    "description": "వృత్తిపరమైన ఈవెంట్ వెబ్‌సైట్లు",
+    "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 4,
+    "name": "బేబీ షవర్",
+    "description": "చిన్నారిని ఆనందంతో స్వాగతించండి",
+    "imageUrl": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 5,
+    "name": "గృహప్రవేశం",
+    "description": "మీ కొత్త ఇంటిని ప్రియమైనవారితో పంచుకోండి",
+    "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
+  }
+]

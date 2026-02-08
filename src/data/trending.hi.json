@@ -1,43 +1,43 @@
 [
   {
     "id": 1,
-    "name": "Romantic Garden",
-    "category": "Wedding",
+    "name": "रोमांटिक गार्डन",
+    "category": "शादी",
     "imageUrl": "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=300&fit=crop",
     "isPopular": true
   },
   {
     "id": 2,
-    "name": "Modern Minimalist",
-    "category": "Wedding",
+    "name": "आधुनिक मिनिमलिस्ट",
+    "category": "शादी",
     "imageUrl": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=400&h=300&fit=crop",
     "isPopular": false
   },
   {
     "id": 3,
-    "name": "Vintage Celebration",
-    "category": "Birthday",
+    "name": "विंटेज सेलिब्रेशन",
+    "category": "जन्मदिन",
     "imageUrl": "https://images.unsplash.com/photo-1464347744102-11db6282f854?w=400&h=300&fit=crop",
     "isPopular": true
   },
   {
     "id": 4,
-    "name": "Executive Summit",
-    "category": "Corporate",
+    "name": "एक्जीक्यूटिव समिट",
+    "category": "कॉर्पोरेट",
     "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop",
     "isPopular": false
   },
   {
     "id": 5,
-    "name": "Sweet Dreams",
-    "category": "Baby Shower",
+    "name": "स्वीट ड्रीम्स",
+    "category": "बेबी शावर",
     "imageUrl": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=300&fit=crop",
     "isPopular": true
   },
   {
     "id": 6,
-    "name": "Cozy Welcome",
-    "category": "Housewarming",
+    "name": "आरामदायक स्वागत",
+    "category": "गृहप्रवेश",
     "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop",
     "isPopular": false
   }

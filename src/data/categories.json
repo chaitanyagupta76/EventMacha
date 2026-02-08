@@ -3,19 +3,19 @@
     "id": 1,
     "name": "Wedding",
     "description": "Elegant themes for your special day",
-    "imageUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=300&fit=crop"
   },
   {
     "id": 2,
     "name": "Birthday",
     "description": "Celebrate another year in style",
-    "imageUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1464347744102-11db6282f854?w=400&h=300&fit=crop"
   },
   {
     "id": 3,
     "name": "Corporate",
     "description": "Professional event websites",
-    "imageUrl": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=300&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop"
   },
   {
     "id": 4,
@@ -27,6 +27,6 @@
     "id": 5,
     "name": "Housewarming",
     "description": "Share your new home with loved ones",
-    "imageUrl": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
   }
 ]

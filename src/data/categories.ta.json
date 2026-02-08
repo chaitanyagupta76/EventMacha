@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "திருமணம்",
+    "description": "உங்கள் சிறப்பு நாளுக்கான நேர்த்தியான தீம்கள்",
+    "imageUrl": "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "பிறந்தநாள்",
+    "description": "மற்றொரு வருடத்தை ஆடம்பரமாக கொண்டாடுங்கள்",
+    "imageUrl": "https://images.unsplash.com/photo-1464347744102-11db6282f854?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 3,
+    "name": "கார்ப்பரேட்",
+    "description": "தொழில்முறை நிகழ்வு வலைத்தளங்கள்",
+    "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 4,
+    "name": "பேபி ஷவர்",
+    "description": "குழந்தையை மகிழ்ச்சியுடன் வரவேற்கவும்",
+    "imageUrl": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 5,
+    "name": "இல்லம் புகுவிழா",
+    "description": "உங்கள் புதிய வீட்டை அன்புக்குரியவர்களுடன் பகிர்ந்து கொள்ளுங்கள்",
+    "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
+  }
+]

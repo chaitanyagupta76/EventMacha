@@ -1,43 +1,43 @@
 [
   {
     "id": 1,
-    "name": "Romantic Garden",
-    "category": "Wedding",
+    "name": "காதல் தோட்டம்",
+    "category": "திருமணம்",
     "imageUrl": "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=300&fit=crop",
     "isPopular": true
   },
   {
     "id": 2,
-    "name": "Modern Minimalist",
-    "category": "Wedding",
+    "name": "நவீன குறைந்தபட்சம்",
+    "category": "திருமணம்",
     "imageUrl": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=400&h=300&fit=crop",
     "isPopular": false
   },
   {
     "id": 3,
-    "name": "Vintage Celebration",
-    "category": "Birthday",
+    "name": "பழமையான கொண்டாட்டம்",
+    "category": "பிறந்தநாள்",
     "imageUrl": "https://images.unsplash.com/photo-1464347744102-11db6282f854?w=400&h=300&fit=crop",
     "isPopular": true
   },
   {
     "id": 4,
-    "name": "Executive Summit",
-    "category": "Corporate",
+    "name": "நிர்வாக உச்சிமாநாடு",
+    "category": "கார்ப்பரேட்",
     "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop",
     "isPopular": false
   },
   {
     "id": 5,
-    "name": "Sweet Dreams",
-    "category": "Baby Shower",
+    "name": "இனிய கனவுகள்",
+    "category": "பேபி ஷவர்",
     "imageUrl": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=300&fit=crop",
     "isPopular": true
   },
   {
     "id": 6,
-    "name": "Cozy Welcome",
-    "category": "Housewarming",
+    "name": "வசதியான வரவேற்பு",
+    "category": "இல்லம் புகுவிழா",
     "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop",
     "isPopular": false
   }
