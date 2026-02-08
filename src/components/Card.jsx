@@ -1,7 +1,7 @@
 const Card = ({ imageUrl, title, description, badge, isPopular, onClick }) => {
     return (
         <div
-            className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
             onClick={onClick}
         >
             <div className="relative h-48 overflow-hidden">
@@ -23,11 +23,11 @@ const Card = ({ imageUrl, title, description, badge, isPopular, onClick }) => {
             </div>
 
             <div className="p-5">
-                <h3 className="text-xl font-serif font-semibold text-brand-navy mb-2">
+                <h3 className="text-xl font-serif font-semibold text-brand-navy dark:text-white mb-2">
                     {title}
                 </h3>
                 {description && (
-                    <p className="text-gray-600 font-sans text-sm">
+                    <p className="text-gray-600 dark:text-gray-300 font-sans text-sm">
                         {description}
                     </p>
                 )}

@@ -12,9 +12,9 @@ const TrendingSection = () => {
     }, []);
 
     return (
-        <section id="themes" className="py-12 md:py-16 lg:py-20 bg-white">
+        <section id="themes" className="py-12 md:py-16 lg:py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
             <div className="container mx-auto px-4 md:px-6">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-brand-navy text-center mb-8 md:mb-12">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-brand-navy dark:text-white text-center mb-8 md:mb-12">
                     {t('trending.title')}
                 </h2>
 
