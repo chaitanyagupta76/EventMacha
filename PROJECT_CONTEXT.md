@@ -1,5 +1,20 @@
 # Event Macha - Project Context & Guidelines
 
+## Hosted in vercel
+https://vercel.com/eventmachas-projects/
+
+Username: eventmacha@gmail.com
+
+## Live site
+https://eventmacha.com/
+
+## Domain purchased from Hostlinger
+hostinger.com
+eventmacha@gmail.com
+
+
+
+
 ## Core Principles
 
 ### 1. Mobile-First Responsive Design (MANDATORY)
