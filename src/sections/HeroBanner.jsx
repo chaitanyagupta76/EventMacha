@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
@@ -157,6 +158,79 @@ const EventMockupCard = ({ card, index, t }) => {
 const HeroBanner = () => {
     const { t } = useTranslation();
 
+    /* ── Auto-scroll carousel on mobile ── */
+    const scrollRef = useRef(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const autoScrollTimer = useRef(null);
+    const resumeTimer = useRef(null);
+    const isMobile = useRef(false);
+
+    // Scroll to a specific card index (horizontal only, no page scroll)
+    const scrollToCard = useCallback((index) => {
+        const container = scrollRef.current;
+        if (!container) return;
+        const card = container.children[index];
+        if (card) {
+            const scrollLeft = card.offsetLeft - container.offsetLeft
+                - (container.clientWidth / 2) + (card.offsetWidth / 2);
+            container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+            setActiveIndex(index);
+        }
+    }, []);
+
+    // Start auto-scroll interval
+    const startAutoScroll = useCallback(() => {
+        clearInterval(autoScrollTimer.current);
+        autoScrollTimer.current = setInterval(() => {
+            setActiveIndex((prev) => {
+                const next = (prev + 1) % eventCards.length;
+                scrollToCard(next);
+                return next;
+            });
+        }, 3000);
+    }, [scrollToCard]);
+
+    // Pause auto-scroll on user interaction, resume after 5s
+    const pauseAutoScroll = useCallback(() => {
+        clearInterval(autoScrollTimer.current);
+        clearTimeout(resumeTimer.current);
+        resumeTimer.current = setTimeout(() => {
+            if (isMobile.current) startAutoScroll();
+        }, 5000);
+    }, [startAutoScroll]);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            // md breakpoint = 768px
+            isMobile.current = window.innerWidth < 768;
+            if (isMobile.current) {
+                startAutoScroll();
+            } else {
+                clearInterval(autoScrollTimer.current);
+            }
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
+        // Listen for user scroll/touch to pause auto-scroll
+        const container = scrollRef.current;
+        if (container) {
+            container.addEventListener('touchstart', pauseAutoScroll);
+            container.addEventListener('scroll', pauseAutoScroll);
+        }
+
+        return () => {
+            window.removeEventListener('resize', checkMobile);
+            clearInterval(autoScrollTimer.current);
+            clearTimeout(resumeTimer.current);
+            if (container) {
+                container.removeEventListener('touchstart', pauseAutoScroll);
+                container.removeEventListener('scroll', pauseAutoScroll);
+            }
+        };
+    }, [startAutoScroll, pauseAutoScroll]);
+
     return (
         <section
             id="home"
@@ -202,7 +276,9 @@ const HeroBanner = () => {
             {/* ── Floating Event Mockup Cards ── */}
             <div className="relative z-10 w-full max-w-6xl mx-auto px-4 pt-8 md:pt-12 lg:pt-16">
                 {/* Desktop: Perspective Row | Mobile/Tablet: Scrollable */}
-                <div className="flex gap-4 md:gap-5 lg:gap-6 justify-start md:justify-center
+                <div
+                    ref={scrollRef}
+                    className="flex gap-4 md:gap-5 lg:gap-6 justify-start md:justify-center
                         overflow-x-auto md:overflow-visible pb-4 md:pb-0
                         scrollbar-hide snap-x snap-mandatory md:snap-none
                         px-4 md:px-0"
@@ -215,9 +291,18 @@ const HeroBanner = () => {
                 </div>
 
                 {/* Mobile scroll indicator */}
+                {/* Mobile scroll indicator — active dot highlights */}
                 <div className="flex md:hidden justify-center mt-3 gap-1.5" aria-hidden="true">
-                    {eventCards.map((card) => (
-                        <div key={card.id} className="w-1.5 h-1.5 rounded-full bg-amber-400/50"></div>
+                    {eventCards.map((card, index) => (
+                        <button
+                            key={card.id}
+                            onClick={() => { scrollToCard(index); pauseAutoScroll(); }}
+                            className={`rounded-full transition-all duration-300 ${index === activeIndex
+                                ? 'w-4 h-1.5 bg-amber-400'
+                                : 'w-1.5 h-1.5 bg-amber-400/40'
+                                }`}
+                            aria-label={`Go to card ${index + 1}`}
+                        />
                     ))}
                 </div>
             </div>
