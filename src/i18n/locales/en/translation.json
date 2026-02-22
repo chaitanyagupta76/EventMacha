@@ -12,7 +12,14 @@
   "hero": {
     "heading": "Create Stunning Websites for Every Occasion",
     "subtext": "Pick a theme and launch in minutes.",
-    "cta": "Get Started"
+    "cta": "Get Started",
+    "viewDetails": "View Details",
+    "cards": {
+      "wedding": { "title": "Raj & Priya", "subtitle": "Our Wedding Day" },
+      "birthday": { "title": "Aarav's Birthday", "subtitle": "Bash! Let's Celebrate" },
+      "conference": { "title": "Global Business", "subtitle": "Summit 2022" },
+      "diwali": { "title": "Diwali Night Party", "subtitle": "Lights, Music & Masti!" }
+    }
   },
   "categories": {
     "title": "Pick a Website Theme by Category"
