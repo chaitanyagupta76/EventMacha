@@ -30,20 +30,6 @@ const Footer = () => {
                         >
                             {t('footer.contact')}
                         </motion.a>
-                        <motion.a
-                            whileHover={{ scale: 1.1, color: '#FDB813' }}
-                            href="#help"
-                            className="hover:text-brand-turmeric transition-colors text-sm md:text-base font-medium"
-                        >
-                            {t('footer.help')}
-                        </motion.a>
-                        <motion.a
-                            whileHover={{ scale: 1.1, color: '#FDB813' }}
-                            href="#privacy"
-                            className="hover:text-brand-turmeric transition-colors text-sm md:text-base font-medium"
-                        >
-                            {t('footer.privacy')}
-                        </motion.a>
                     </div>
                 </div>
 

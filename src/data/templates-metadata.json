@@ -1,0 +1,25 @@
+{
+  "templates": [
+    {
+      "name": "Boss Baby",
+      "category": "Birthday",
+      "themeCode": "BIR1",
+      "sitePreviewImage": "/site_images/bir1.png",
+      "siteUrl": "https://bir1.eventmacha.com"
+    },
+    {
+      "name": "Luxury Aesthetic",
+      "category": "Wedding",
+      "themeCode": "WED01",
+      "sitePreviewImage": "/site_images/wed1.png",
+      "siteUrl": "https://wed1.eventmacha.com"
+    },
+    {
+      "name": "Modern Aesthetic",
+      "category": "Wedding",
+      "themeCode": "wed2",
+      "sitePreviewImage": "/site_images/wed2.png",
+      "siteUrl": "https://wed2.eventmacha.com"
+    }
+  ]
+}

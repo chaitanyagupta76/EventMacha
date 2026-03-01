@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../context/ThemeContext';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const { t, i18n } = useTranslation();
@@ -44,28 +45,39 @@ const Header = () => {
             <div className="container mx-auto px-4 py-3 md:py-4">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        className="text-xl md:text-2xl font-serif font-bold text-brand-maroon dark:text-brand-gold"
-                    >
-                        {t('header.logo')}
-                    </motion.div>
+                    <Link to="/">
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            className="text-xl md:text-2xl font-serif font-bold text-brand-maroon dark:text-brand-gold cursor-pointer"
+                        >
+                            {t('header.logo')}
+                        </motion.div>
+                    </Link>
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+                        <Link to="/">
+                            <motion.span
+                                whileHover={{ scale: 1.1, color: '#FF6B35' }}
+                                className="text-sm lg:text-base text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors font-medium"
+                            >
+                                {t('header.nav.home')}
+                            </motion.span>
+                        </Link>
+                        <Link to="/templates">
+                            <motion.span
+                                whileHover={{ scale: 1.1, color: '#FF6B35' }}
+                                className="text-sm lg:text-base text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors font-medium"
+                            >
+                                {t('header.nav.themes')}
+                            </motion.span>
+                        </Link>
                         <motion.a
                             whileHover={{ scale: 1.1, color: '#FF6B35' }}
-                            href="#home"
+                            href="#pricing"
                             className="text-sm lg:text-base text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors font-medium"
                         >
-                            {t('header.nav.home')}
-                        </motion.a>
-                        <motion.a
-                            whileHover={{ scale: 1.1, color: '#FF6B35' }}
-                            href="#themes"
-                            className="text-sm lg:text-base text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors font-medium"
-                        >
-                            {t('header.nav.themes')}
+                            {t('header.nav.pricing')}
                         </motion.a>
                         <motion.a
                             whileHover={{ scale: 1.1, color: '#FF6B35' }}
@@ -74,13 +86,7 @@ const Header = () => {
                         >
                             {t('header.nav.contact')}
                         </motion.a>
-                        <motion.a
-                            whileHover={{ scale: 1.1, color: '#FF6B35' }}
-                            href="#help"
-                            className="text-sm lg:text-base text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors font-medium"
-                        >
-                            {t('header.nav.help')}
-                        </motion.a>
+
 
                         {/* Theme Toggle - Desktop */}
                         <motion.button
@@ -128,8 +134,8 @@ const Header = () => {
                                             whileHover={{ backgroundColor: '#FEF3C7' }}
                                             onClick={() => changeLanguage(lang.code)}
                                             className={`w-full text-left px-4 py-3 transition-colors ${i18n.language === lang.code
-                                                    ? 'bg-brand-saffron text-white font-bold'
-                                                    : 'text-brand-maroon dark:text-gray-200 hover:bg-brand-cream dark:hover:bg-gray-700'
+                                                ? 'bg-brand-saffron text-white font-bold'
+                                                : 'text-brand-maroon dark:text-gray-200 hover:bg-brand-cream dark:hover:bg-gray-700'
                                                 }`}
                                         >
                                             <div className="flex items-center justify-between">
@@ -175,19 +181,26 @@ const Header = () => {
                         className="md:hidden mt-4 pb-4 border-t-2 border-brand-gold dark:border-gray-700 pt-4"
                     >
                         <div className="flex flex-col space-y-4">
-                            <a
-                                href="#home"
+                            <Link
+                                to="/"
                                 onClick={closeMobileMenu}
                                 className="text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors py-2 font-medium"
                             >
                                 {t('header.nav.home')}
-                            </a>
-                            <a
-                                href="#themes"
+                            </Link>
+                            <Link
+                                to="/templates"
                                 onClick={closeMobileMenu}
                                 className="text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors py-2 font-medium"
                             >
                                 {t('header.nav.themes')}
+                            </Link>
+                            <a
+                                href="#pricing"
+                                onClick={closeMobileMenu}
+                                className="text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors py-2 font-medium"
+                            >
+                                {t('header.nav.pricing')}
                             </a>
                             <a
                                 href="#contact"
@@ -196,13 +209,7 @@ const Header = () => {
                             >
                                 {t('header.nav.contact')}
                             </a>
-                            <a
-                                href="#help"
-                                onClick={closeMobileMenu}
-                                className="text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors py-2 font-medium"
-                            >
-                                {t('header.nav.help')}
-                            </a>
+
 
                             {/* Theme Toggle - Mobile */}
                             <div className="flex items-center justify-between pt-2 border-t border-brand-gold dark:border-gray-700">
@@ -236,8 +243,8 @@ const Header = () => {
                                                 closeMobileMenu();
                                             }}
                                             className={`px-3 py-2 rounded text-sm font-semibold transition-colors text-left ${i18n.language === lang.code
-                                                    ? 'bg-brand-saffron text-white'
-                                                    : 'bg-brand-cream dark:bg-gray-700 text-brand-maroon dark:text-gray-200'
+                                                ? 'bg-brand-saffron text-white'
+                                                : 'bg-brand-cream dark:bg-gray-700 text-brand-maroon dark:text-gray-200'
                                                 }`}
                                         >
                                             {lang.nativeName}

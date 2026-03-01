@@ -4,14 +4,14 @@
     "nav": {
       "home": "Home",
       "themes": "Themes",
-      "contact": "Contact",
-      "help": "Help"
+      "pricing": "Pricing",
+      "contact": "Contact"
     },
     "language": "Language"
   },
   "hero": {
     "heading": "Create Stunning Websites for Every Occasion",
-    "subtext": "Pick a theme and launch in minutes.",
+    "subtext": "",
     "cta": "Get Started",
     "viewDetails": "View Details",
     "cards": {
@@ -26,12 +26,96 @@
   },
   "trending": {
     "title": "Trending Themes",
-    "popular": "Popular"
+    "popular": "Popular",
+    "underConstruction": "Under Construction - Coming Soon!"
+  },
+  "pricing": {
+    "title": "Pricing Plans",
+    "subtitle": "Choose the perfect plan for your event website",
+    "popular": "Most Popular",
+    "contactUs": "Contact Us",
+    "comparisonTitle": "Compare Plans",
+    "feature": "Feature",
+    "priceLabel": "Price",
+    "plans": {
+      "pro": {
+        "name": "Pro",
+        "originalPrice": "₹10,000",
+        "price": "₹5,000",
+        "validity": "1 Year Validity"
+      },
+      "proPlus": {
+        "name": "Pro Plus",
+        "originalPrice": "₹12,000",
+        "price": "₹7,000",
+        "validity": "1 Year Validity"
+      },
+      "ultimate": {
+        "name": "Ultimate",
+        "originalPrice": "",
+        "price": "₹20,000",
+        "validity": "10 Years Validity"
+      }
+    },
+    "features": {
+      "customWebsite": "Custom Website Design",
+      "eventMachaHosting": "Event Macha Hosting (eventmacha.com domain)",
+      "customHosting": "Custom Hosting (Your preferred URL)",
+      "validity1Year": "1 Year Site Validity",
+      "validity10Years": "10 Years Site Validity"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "message": "We are just a call away! Please reach out to us for your queries. Our expert team will provide guidance and make your event memorable."
+  },
+  "templates": {
+    "pageTitle": "Browse Templates",
+    "pageSubtitle": "Find the perfect event website template for your celebration",
+    "searchPlaceholder": "Search by template name or code...",
+    "filterByCategory": "Filter by Category",
+    "showing": "Showing",
+    "of": "of",
+    "templatesLabel": "templates",
+    "noResults": "No templates found",
+    "noResultsHint": "Try adjusting your search or filters",
+    "previewComingSoon": "Preview coming soon",
+    "preview": "Preview",
+    "code": "Code",
+    "noTemplatesInCategory": "No templates available for this category yet"
+  },
+  "orderPopup": {
+    "title": "Place Your Order",
+    "subtitle": "Provide your details for our team to contact you.",
+    "name": "Name",
+    "namePlaceholder": "Your full name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "mobile": "Mobile Number",
+    "mobilePlaceholder": "+91 XXXXX XXXXX",
+    "itemCode": "Item Code",
+    "selectPlan": "Select Plan",
+    "captcha": "Verify you're human",
+    "captchaPlaceholder": "Answer",
+    "captchaError": "Incorrect answer. Please try again.",
+    "placeOrder": "🛒 Place Order",
+    "sending": "Sending...",
+    "success": "Order placed successfully!",
+    "successTitle": "Order Placed Successfully! 🎉",
+    "successMessage": "Our team has received your request and our executive will contact you within 2 business days.",
+    "urgentMessage": "In case of an urgent request, please feel free to contact us:",
+    "close": "Close",
+    "error": "Something went wrong. Please try again.",
+    "technicalError": "Technical Error",
+    "technicalErrorMessage": "We encountered a technical issue while processing your order. Please reach out to us using the details in the Contact Us section below."
+  },
+  "underConstruction": {
+    "title": "Site Under Construction",
+    "message": "This template preview is currently being built. Please check back soon!",
+    "ok": "Got it"
   },
   "footer": {
     "contact": "Contact",
-    "help": "Help",
-    "privacy": "Privacy Policy",
     "copyright": "© 2026 Event Macha. All rights reserved."
   }
 }

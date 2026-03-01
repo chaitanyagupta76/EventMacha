@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 /* ─────────────── Event Mockup Card Data ─────────────── */
@@ -157,6 +158,7 @@ const EventMockupCard = ({ card, index, t }) => {
 /* ═══════════════ HERO BANNER COMPONENT ═══════════════ */
 const HeroBanner = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     /* ── Auto-scroll carousel on mobile ── */
     const scrollRef = useRef(null);
@@ -322,15 +324,17 @@ const HeroBanner = () => {
                 </motion.h1>
 
                 {/* Subtext */}
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 1.0, ease: 'easeOut' }}
-                    className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/85 font-sans
-                     mb-8 md:mb-10 max-w-2xl mx-auto drop-shadow-md"
-                >
-                    {t('hero.subtext')}
-                </motion.p>
+                {t('hero.subtext') && (
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 1.0, ease: 'easeOut' }}
+                        className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/85 font-sans
+                         mb-8 md:mb-10 max-w-2xl mx-auto drop-shadow-md"
+                    >
+                        {t('hero.subtext')}
+                    </motion.p>
+                )}
 
                 {/* CTA Button */}
                 <motion.button
@@ -342,12 +346,13 @@ const HeroBanner = () => {
                         boxShadow: '0 0 40px rgba(251, 184, 19, 0.4)',
                     }}
                     whileTap={{ scale: 0.96 }}
+                    onClick={() => navigate('/templates')}
                     className="bg-gradient-to-r from-brand-saffron to-brand-turmeric
                      text-white font-sans font-bold
                      px-8 py-3.5 md:px-10 md:py-4 rounded-xl text-base md:text-lg
                      transition-all duration-300 shadow-xl shadow-orange-500/20
                      border border-brand-gold/30 animate-pulse-glow
-                     hover:from-brand-turmeric hover:to-brand-saffron"
+                     hover:from-brand-turmeric hover:to-brand-saffron mt-8"
                     aria-label={t('hero.cta')}
                 >
                     {t('hero.cta')}

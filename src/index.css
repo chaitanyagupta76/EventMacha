@@ -34,3 +34,25 @@ h6 {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Phone input overrides */
+.phone-input-custom .PhoneInputInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  color: inherit;
+}
+
+.phone-input-custom .PhoneInputCountry {
+  margin-right: 0.5rem;
+}
+
+.phone-input-custom .PhoneInputCountrySelect {
+  background: transparent;
+}
+
+.phone-input-custom .PhoneInputCountryIcon {
+  width: 1.5rem;
+  height: 1.1rem;
+}
