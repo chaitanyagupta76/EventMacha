@@ -1,7 +1,12 @@
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const TemplatePreviewModal = ({ isOpen, onClose, siteUrl, templateName }) => {
+    const { i18n } = useTranslation();
     if (!isOpen) return null;
+
+    const separator = siteUrl.includes('?') ? '&' : '?';
+    const finalUrl = `${siteUrl}${separator}lang=${i18n.language || 'en'}`;
 
     return (
         <AnimatePresence>
@@ -36,7 +41,7 @@ const TemplatePreviewModal = ({ isOpen, onClose, siteUrl, templateName }) => {
                 {/* Iframe */}
                 <div className="flex-grow relative">
                     <iframe
-                        src={siteUrl}
+                        src={finalUrl}
                         title={`Preview: ${templateName}`}
                         className="w-full h-full border-0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -14,6 +14,14 @@ const DEFAULT_LANGUAGE = 'en';
 
 // Get saved language from localStorage or use default
 const getSavedLanguage = () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const langParam = urlParams.get('lang');
+
+  // If lang is passed in URL and is available, use it
+  if (langParam && AVAILABLE_LANGUAGES.includes(langParam)) {
+    return langParam;
+  }
+
   const savedLang = localStorage.getItem('language');
   // If saved language is available in our list, use it; otherwise use default
   return savedLang && AVAILABLE_LANGUAGES.includes(savedLang) ? savedLang : DEFAULT_LANGUAGE;

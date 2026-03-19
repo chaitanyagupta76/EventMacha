@@ -20,6 +20,20 @@
       "themeCode": "wed2",
       "sitePreviewImage": "/site_images/wed2.png",
       "siteUrl": "https://wed2.eventmacha.com"
+    },
+    {
+      "name": "Golden Union",
+      "category": "Wedding",
+      "themeCode": "wed3",
+      "sitePreviewImage": "/site_images/wed3.png",
+      "siteUrl": "https://wed3.eventmacha.com"
+    },
+    {
+      "name": "Tiny Tales",
+      "category": "Birthday",
+      "themeCode": "bir2",
+      "sitePreviewImage": "/site_images/bir2.png",
+      "siteUrl": "https://bir2.eventmacha.com"
     }
   ]
 }

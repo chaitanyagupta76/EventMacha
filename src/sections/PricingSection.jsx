@@ -11,6 +11,7 @@ const PricingSection = () => {
         {
             key: 'pro',
             popular: false,
+            launchOffer: true,
             gradient: 'from-brand-maroon to-brand-royal',
             iconBg: 'bg-brand-maroon/10',
             iconColor: 'text-brand-maroon',
@@ -93,10 +94,19 @@ const PricingSection = () => {
                                 }`}
                         >
                             {/* Popular Badge */}
-                            {plan.popular && (
+                            {plan.popular && !plan.launchOffer && (
                                 <div className="absolute top-0 left-0 right-0">
                                     <div className={`bg-gradient-to-r ${plan.gradient} text-white text-center py-1.5 text-xs font-bold uppercase tracking-wider`}>
                                         {t('pricing.popular')}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Launch Offer Badge */}
+                            {plan.launchOffer && (
+                                <div className="absolute top-0 left-0 right-0">
+                                    <div className="bg-gradient-to-r from-red-600 to-red-500 text-white text-center py-1.5 text-xs font-bold uppercase tracking-wider shadow-md animate-pulse">
+                                        Launch Offer
                                     </div>
                                 </div>
                             )}
@@ -232,11 +242,11 @@ const PricingSection = () => {
                                         </td>
                                         <td className="px-4 md:px-6 py-4 text-center">
                                             <span className="text-gray-400 line-through text-xs block">₹10,000</span>
-                                            <span className="text-brand-maroon dark:text-brand-gold font-bold">₹5,000</span>
+                                            <span className="text-brand-maroon dark:text-brand-gold font-bold">₹2,000</span>
                                         </td>
                                         <td className="px-4 md:px-6 py-4 text-center bg-brand-saffron/5">
                                             <span className="text-gray-400 line-through text-xs block">₹12,000</span>
-                                            <span className="text-brand-saffron font-bold">₹7,000</span>
+                                            <span className="text-brand-saffron font-bold">₹5,000</span>
                                         </td>
                                         <td className="px-4 md:px-6 py-4 text-center">
                                             <span className="text-brand-emerald dark:text-green-400 font-bold">₹20,000</span>
