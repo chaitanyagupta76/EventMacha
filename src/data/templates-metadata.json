@@ -34,6 +34,14 @@
       "themeCode": "bir2",
       "sitePreviewImage": "/site_images/bir2.png",
       "siteUrl": "https://bir2.eventmacha.com"
+    },
+    {
+      "name": "Mountain Vibe",
+      "category": "Wedding",
+      "themeCode": "wed4",
+      "sitePreviewImage": "/site_images/wed4.png",
+      "siteUrl": "https://wed4.eventmacha.com"
     }
+
   ]
 }
