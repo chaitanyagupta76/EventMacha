@@ -346,7 +346,10 @@ const HeroBanner = () => {
                         boxShadow: '0 0 40px rgba(251, 184, 19, 0.4)',
                     }}
                     whileTap={{ scale: 0.96 }}
-                    onClick={() => navigate('/templates')}
+                    onClick={() => {
+                        navigate('/templates');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                     className="bg-gradient-to-r from-brand-saffron to-brand-turmeric
                      text-white font-sans font-bold
                      px-8 py-3.5 md:px-10 md:py-4 rounded-xl text-base md:text-lg

@@ -2,13 +2,34 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../context/ThemeContext';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const { t, i18n } = useTranslation();
     const { theme, toggleTheme } = useTheme();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleScrollNav = (e, hash) => {
+        e.preventDefault();
+        closeMobileMenu();
+        if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(() => {
+                const element = document.querySelector(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 300); // Delay to allow the home page components to render
+        } else {
+            const element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
 
     const languages = [
         { code: 'en', name: 'English', nativeName: 'English' },
@@ -45,7 +66,7 @@ const Header = () => {
             <div className="container mx-auto px-4 py-3 md:py-4">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link to="/">
+                    <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             className="text-xl md:text-2xl font-serif font-bold text-brand-maroon dark:text-brand-gold cursor-pointer"
@@ -56,7 +77,7 @@ const Header = () => {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-                        <Link to="/">
+                        <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                             <motion.span
                                 whileHover={{ scale: 1.1, color: '#FF6B35' }}
                                 className="text-sm lg:text-base text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors font-medium"
@@ -64,7 +85,7 @@ const Header = () => {
                                 {t('header.nav.home')}
                             </motion.span>
                         </Link>
-                        <Link to="/templates">
+                        <Link to="/templates" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                             <motion.span
                                 whileHover={{ scale: 1.1, color: '#FF6B35' }}
                                 className="text-sm lg:text-base text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors font-medium"
@@ -75,6 +96,7 @@ const Header = () => {
                         <motion.a
                             whileHover={{ scale: 1.1, color: '#FF6B35' }}
                             href="#pricing"
+                            onClick={(e) => handleScrollNav(e, '#pricing')}
                             className="text-sm lg:text-base text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors font-medium"
                         >
                             {t('header.nav.pricing')}
@@ -82,6 +104,7 @@ const Header = () => {
                         <motion.a
                             whileHover={{ scale: 1.1, color: '#FF6B35' }}
                             href="#contact"
+                            onClick={(e) => handleScrollNav(e, '#contact')}
                             className="text-sm lg:text-base text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors font-medium"
                         >
                             {t('header.nav.contact')}
@@ -183,28 +206,34 @@ const Header = () => {
                         <div className="flex flex-col space-y-4">
                             <Link
                                 to="/"
-                                onClick={closeMobileMenu}
+                                onClick={() => {
+                                    closeMobileMenu();
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }}
                                 className="text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors py-2 font-medium"
                             >
                                 {t('header.nav.home')}
                             </Link>
                             <Link
                                 to="/templates"
-                                onClick={closeMobileMenu}
+                                onClick={() => {
+                                    closeMobileMenu();
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }}
                                 className="text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors py-2 font-medium"
                             >
                                 {t('header.nav.themes')}
                             </Link>
                             <a
                                 href="#pricing"
-                                onClick={closeMobileMenu}
+                                onClick={(e) => handleScrollNav(e, '#pricing')}
                                 className="text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors py-2 font-medium"
                             >
                                 {t('header.nav.pricing')}
                             </a>
                             <a
                                 href="#contact"
-                                onClick={closeMobileMenu}
+                                onClick={(e) => handleScrollNav(e, '#contact')}
                                 className="text-brand-maroon dark:text-gray-200 hover:text-brand-saffron dark:hover:text-brand-gold transition-colors py-2 font-medium"
                             >
                                 {t('header.nav.contact')}
