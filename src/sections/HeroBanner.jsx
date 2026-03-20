@@ -61,6 +61,8 @@ const bokehParticles = [
 
 /* ─────────────── Single Event Mockup Card ─────────────── */
 const EventMockupCard = ({ card, index, t }) => {
+    const navigate = useNavigate();
+
     // Stagger the animation direction for variety
     const isEven = index % 2 === 0;
     const floatClass = isEven ? 'animate-float' : 'animate-float-reverse';
@@ -88,9 +90,15 @@ const EventMockupCard = ({ card, index, t }) => {
                 }}
             >
                 {/* Card Frame — Glass-morphism browser mockup */}
-                <div className="rounded-xl overflow-hidden shadow-2xl border border-white/10 backdrop-blur-sm
+                <div 
+                    onClick={() => {
+                        navigate('/templates');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="rounded-xl overflow-hidden shadow-2xl border border-white/10 backdrop-blur-sm
                         hover:scale-105 hover:shadow-amber-500/20 transition-all duration-500 group
-                        cursor-pointer">
+                        cursor-pointer"
+                >
                     {/* Browser Chrome */}
                     <div className="bg-gray-800/90 px-3 py-2 flex items-center gap-1.5">
                         <span className="w-2.5 h-2.5 rounded-full bg-red-400"></span>
