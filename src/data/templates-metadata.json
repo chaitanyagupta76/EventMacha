@@ -41,7 +41,13 @@
       "themeCode": "wed4",
       "sitePreviewImage": "/site_images/wed4.png",
       "siteUrl": "https://wed4.eventmacha.com"
+    },
+    {
+      "name": "Royal Twilight",
+      "category": "Wedding",
+      "themeCode": "wed5",
+      "sitePreviewImage": "/site_images/wed5.png",
+      "siteUrl": "https://wed5.eventmacha.com"
     }
-
   ]
 }

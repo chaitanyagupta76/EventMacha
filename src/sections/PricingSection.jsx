@@ -25,14 +25,6 @@ const PricingSection = () => {
             iconColor: 'text-brand-saffron',
             features: ['customWebsite', 'customHosting', 'validity1Year'],
         },
-        {
-            key: 'ultimate',
-            popular: false,
-            gradient: 'from-brand-emerald to-brand-peacock',
-            iconBg: 'bg-brand-emerald/10',
-            iconColor: 'text-brand-emerald',
-            features: ['customWebsite', 'customHosting', 'validity10Years'],
-        },
     ];
 
     const comparisonFeatures = [
@@ -40,13 +32,11 @@ const PricingSection = () => {
         'eventMachaHosting',
         'customHosting',
         'validity1Year',
-        'validity10Years',
     ];
 
     const planFeatureCheck = {
         pro: ['customWebsite', 'eventMachaHosting', 'validity1Year'],
         proPlus: ['customWebsite', 'customHosting', 'validity1Year'],
-        ultimate: ['customWebsite', 'customHosting', 'validity10Years'],
     };
 
     return (
@@ -76,7 +66,7 @@ const PricingSection = () => {
                 </motion.div>
 
                 {/* Pricing Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-14">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-14 max-w-4xl mx-auto">
                     {plans.map((plan, index) => (
                         <motion.div
                             key={plan.key}
@@ -123,11 +113,6 @@ const PricingSection = () => {
                                         {plan.key === 'proPlus' && (
                                             <svg className={`w-7 h-7 ${plan.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                                            </svg>
-                                        )}
-                                        {plan.key === 'ultimate' && (
-                                            <svg className={`w-7 h-7 ${plan.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                                             </svg>
                                         )}
                                     </div>
@@ -207,7 +192,6 @@ const PricingSection = () => {
                                         <th className="px-4 md:px-6 py-4 text-left text-sm font-semibold">{t('pricing.feature')}</th>
                                         <th className="px-4 md:px-6 py-4 text-center text-sm font-semibold">{t('pricing.plans.pro.name')}</th>
                                         <th className="px-4 md:px-6 py-4 text-center text-sm font-semibold bg-brand-saffron/20">{t('pricing.plans.proPlus.name')}</th>
-                                        <th className="px-4 md:px-6 py-4 text-center text-sm font-semibold">{t('pricing.plans.ultimate.name')}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -216,7 +200,7 @@ const PricingSection = () => {
                                             <td className="px-4 md:px-6 py-3.5 text-sm font-sans text-gray-700 dark:text-gray-300">
                                                 {t(`pricing.features.${feature}`)}
                                             </td>
-                                            {['pro', 'proPlus', 'ultimate'].map((planKey) => (
+                                            {['pro', 'proPlus'].map((planKey) => (
                                                 <td key={planKey} className={`px-4 md:px-6 py-3.5 text-center ${planKey === 'proPlus' ? 'bg-brand-saffron/5' : ''}`}>
                                                     {planFeatureCheck[planKey].includes(feature) ? (
                                                         <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30">
@@ -247,9 +231,6 @@ const PricingSection = () => {
                                         <td className="px-4 md:px-6 py-4 text-center bg-brand-saffron/5">
                                             <span className="text-gray-400 line-through text-xs block">₹12,000</span>
                                             <span className="text-brand-saffron font-bold">₹5,000</span>
-                                        </td>
-                                        <td className="px-4 md:px-6 py-4 text-center">
-                                            <span className="text-brand-emerald dark:text-green-400 font-bold">₹20,000</span>
                                         </td>
                                     </tr>
                                 </tbody>

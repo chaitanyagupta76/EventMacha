@@ -19,6 +19,11 @@ const SearchTemplatesPage = () => {
 
     const templates = templatesData.templates;
 
+    // Scroll to top on mount
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     // Pre-select category from URL query param
     useEffect(() => {
         const categoryFromUrl = searchParams.get('category');
@@ -26,6 +31,23 @@ const SearchTemplatesPage = () => {
             setSelectedCategories([categoryFromUrl]);
         }
     }, [searchParams]);
+
+    // Handle back button to close preview modal
+    useEffect(() => {
+        if (previewTemplate) {
+            window.history.pushState({ previewOpen: true }, '');
+            
+            const handlePopState = () => {
+                setPreviewTemplate(null);
+            };
+
+            window.addEventListener('popstate', handlePopState);
+            
+            return () => {
+                window.removeEventListener('popstate', handlePopState);
+            };
+        }
+    }, [previewTemplate]);
 
     // Filter templates
     const filteredTemplates = useMemo(() => {
@@ -250,7 +272,12 @@ const SearchTemplatesPage = () => {
             {/* Modals */}
             <TemplatePreviewModal
                 isOpen={!!previewTemplate}
-                onClose={() => setPreviewTemplate(null)}
+                onClose={() => {
+                    if (window.history.state?.previewOpen) {
+                        window.history.back();
+                    }
+                    setPreviewTemplate(null);
+                }}
                 siteUrl={previewTemplate?.siteUrl}
                 templateName={previewTemplate?.name}
             />

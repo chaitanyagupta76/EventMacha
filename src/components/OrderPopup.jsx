@@ -56,7 +56,6 @@ const OrderPopup = ({ isOpen, onClose, template }) => {
     const plans = [
         { value: 'pro', label: t('pricing.plans.pro.name'), price: t('pricing.plans.pro.price') },
         { value: 'proPlus', label: t('pricing.plans.proPlus.name'), price: t('pricing.plans.proPlus.price') },
-        { value: 'ultimate', label: t('pricing.plans.ultimate.name'), price: t('pricing.plans.ultimate.price') },
     ];
 
     const handleChange = (e) => {

@@ -41,13 +41,13 @@
         "name": "ப்ரோ",
         "originalPrice": "₹10,000",
         "price": "₹2,000",
-        "validity": "1 வருடம் செல்லுபடி"
+        "validity": "1 வருடம் செல்லுபடி (₹500 for every additional year)"
       },
       "proPlus": {
         "name": "ப்ரோ பிளஸ்",
         "originalPrice": "₹12,000",
         "price": "₹5,000",
-        "validity": "1 வருடம் செல்லுபடி"
+        "validity": "1 வருடம் செல்லுபடி (₹1000 for every additional year)"
       },
       "ultimate": {
         "name": "அல்டிமேட்",

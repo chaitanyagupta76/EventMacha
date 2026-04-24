@@ -41,13 +41,13 @@
         "name": "ಪ್ರೊ",
         "originalPrice": "₹10,000",
         "price": "₹2,000",
-        "validity": "1 ವರ್ಷ ಮಾನ್ಯತೆ"
+        "validity": "1 ವರ್ಷ ಮಾನ್ಯತೆ (₹500 for every additional year)"
       },
       "proPlus": {
         "name": "ಪ್ರೊ ಪ್ಲಸ್",
         "originalPrice": "₹12,000",
         "price": "₹5,000",
-        "validity": "1 ವರ್ಷ ಮಾನ್ಯತೆ"
+        "validity": "1 ವರ್ಷ ಮಾನ್ಯತೆ (₹1000 for every additional year)"
       },
       "ultimate": {
         "name": "ಅಲ್ಟಿಮೇಟ್",
